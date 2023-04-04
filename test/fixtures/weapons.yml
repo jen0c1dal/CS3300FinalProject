@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyString
+  dmg_type: MyString
+  dmg_dice: MyString
+  int: MyString
+  power_level: 
+
+two:
+  name: MyString
+  description: MyString
+  dmg_type: MyString
+  dmg_dice: MyString
+  int: MyString
+  power_level: 
