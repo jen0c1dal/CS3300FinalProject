@@ -4,7 +4,7 @@ class CreateWeapons < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :description
       t.string :dmg_type
-      t.integer :dmg_dice
+      t.string :dmg_dice
       t.integer :power_level
 
       t.timestamps

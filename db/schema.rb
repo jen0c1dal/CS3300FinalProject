@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2023_04_04_030051) do
     t.string "name"
     t.string "description"
     t.string "dmg_type"
-    t.integer "dmg_dice"
+    t.string "dmg_dice"
     t.integer "power_level"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
