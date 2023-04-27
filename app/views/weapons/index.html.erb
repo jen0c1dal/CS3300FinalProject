@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag('application') %>
 
 <h1>Weapons</h1>
 
@@ -22,9 +23,9 @@
         <td><%= weapon.dmg_type %></td>
         <td><%= weapon.dmg_dice %></td>
         <td><%= weapon.power_level %></td>
-        <td><%= link_to 'Show', weapon %></td>
-        <td><%= link_to 'Edit', edit_weapon_path(weapon) %></td>
-        <td><%= link_to 'Destroy', weapon, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', weapon, class: 'btn btn-success' %></td>
+        <td><%= link_to 'Edit', edit_weapon_path(weapon), class: 'btn btn-warning' %></td>
+        <td><%= link_to 'Destroy', weapon, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
       </tr>
     <% end %>
   </tbody>
