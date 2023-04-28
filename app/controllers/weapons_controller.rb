@@ -1,5 +1,6 @@
 class WeaponsController < ApplicationController
   before_action :set_weapon, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[ new edit create update destroy ]
 
   # GET /weapons or /weapons.json
   def index
@@ -65,6 +66,6 @@ class WeaponsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def weapon_params
-      params.require(:weapon).permit(:name, :description, :dmg_type, :dmg_dice, :string, :p_level)
+      params.require(:weapon).permit(:name, :description, :dmg_type, :dmg_dice, :power_level)
     end
 end
