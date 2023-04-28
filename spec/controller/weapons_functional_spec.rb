@@ -1,6 +1,12 @@
 require "rails_helper"
 
 RSpec.describe WeaponsController, :type => :controller do
+    
+    login_user
+
+    let(:valid_attributes) {{ :name => "Test Name", :description => "test description", :dmg_type => "new damage type", :dmg_dice => "zdz", :power_level => "2"}}
+    let(:valid_session) { {} }
+
     describe "test web requests" do
         context "GET #index" do
             it "returns a success response" do

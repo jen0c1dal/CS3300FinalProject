@@ -2,7 +2,7 @@ require "rails_helper"
 
 describe "Weapon Attribute Requirements on Create", :type => :model do
   context "validation tests" do
-    it "ensures the name is present when creating weapon" do
+      it "ensures the name is present when creating weapon" do
       weapon = Weapon.new(description: "Content of the description", dmg_type: "damage type", dmg_dice: "xdx", power_level: "1")
       expect(weapon.valid?).to eq(false)
     end
