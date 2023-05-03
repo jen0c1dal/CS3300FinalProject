@@ -9,7 +9,7 @@
           null,
           null,
           1,
-          5,
+          7,
           null,
           null,
           null,
@@ -164,11 +164,6 @@
       "/root/CS3300FinalProject/app/models/user.rb": {
         "lines": [
           0,
-          null,
-          null,
-          0,
-          0,
-          0,
           0,
           0,
           0
@@ -177,6 +172,6 @@
         }
       }
     },
-    "timestamp": 1682717688
+    "timestamp": 1683095528
   }
 }

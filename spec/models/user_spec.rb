@@ -21,29 +21,29 @@ RSpec.describe User, type: :model do
         it 'Cannot register if email is empty' do
           @user.email = nil
           @user.valid?
-          expect(@user.errors.full_messages).to include('Please enter your email')
+          expect(@user.errors.full_messages).to include("Email can't be blank")
         end
         it 'Cannot register if there are duplicate emails' do
           @user.save
           another_user = FactoryBot.build(:user, email: @user.email)
           another_user.valid?
-          expect(another_user.errors.full_messages).to include('Email already exists')
+          expect(another_user.errors.full_messages).to include('Email has already been taken')
         end
         it 'Cannot register if password is empty' do
           @user.password = nil
           @user.valid?
-          expect(@user.errors.full_messages).to include('Please enter your password')
+          expect(@user.errors.full_messages).to include("Password can't be blank")
         end
         it 'password even if password exists_Confirmation cannot be registered if it is empty' do
           @user.password_confirmation = ''
           @user.valid?
-          expect(@user.errors.full_messages).to include('Password (for confirmation) and password input do not match')
+          expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
         end
         it 'Cannot register if password is 5 characters or less' do
           @user.password = '12345'
           @user.password_confirmation = '12345'
           @user.valid?
-          expect(@user.errors.full_messages).to include('Please enter the password with at least 6 characters')
+          expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
         end
       end
     end
